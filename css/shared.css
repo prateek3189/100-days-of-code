@@ -1,0 +1,52 @@
+body {
+  color: #133453;
+  background-color: #e9f4fd;
+  font-family: "Fira Sans", sans-serif;
+  text-align: center;
+  font-size: 1rem;
+  padding-bottom: 100px;
+}
+
+a {
+  color: #1e70ce;
+  text-decoration: none;
+}
+a:hover {
+  color: #133453;
+  text-decoration: underline;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #234770;
+  border: 1px #133453;
+  color: #ffffff;
+  align-items: center;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 0;
+  font-size: 16px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+ul li {
+  min-width: 200px;
+}
+textarea {
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
+}
