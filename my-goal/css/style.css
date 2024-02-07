@@ -1,0 +1,54 @@
+* {
+  font-family: "Fira sans", sans-serif;
+}
+
+body {
+  text-align: center;
+  background-color: rgb(233, 215, 207);
+  margin: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(240, 159, 240);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p,
+h1 {
+  font-family: "Fira sans", sans-serif;
+  color: #534b4b;
+}
+
+h1 {
+  color: red;
+}
+
+#today-challenge {
+  color: rgb(221, 118, 15);
+  font-weight: bold;
+}
+
+main {
+  width: 800px;
+  margin: 200px auto;
+  padding: 24px;
+  background-color: rgb(106, 219, 94);
+  border-radius: 8px;
+  border: 5px solid;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid;
+  margin-top: -150px;
+}
+
+ol {
+  list-style: none;
+}
