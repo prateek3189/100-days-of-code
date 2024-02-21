@@ -1,4 +1,4 @@
-# HTML CSS Sample 1
+# HTML CSS Sample 2
 
 ## How to run
 
