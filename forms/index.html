@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Forms</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>User Data</h1>
+    </header>
+    <main>
+      <form action="./index.html" method="GET">
+        <section>
+          <h2>Your Personal Details</h2>
+          <ul>
+            <li>
+              <label for="title">Title</label>
+              <select name="title" id="title">
+                <option value="">Select</option>
+                <option value="mr">Mr.</option>
+                <option value="ms">Ms.</option>
+                <option value="mrs">Mrs.</option>
+              </select>
+            </li>
+            <li>
+              <label for="user-name">User Name</label>
+              <input
+                type="text"
+                name="user-name"
+                id="user-name"
+                placeholder="John Doe"
+                required
+              />
+            </li>
+            <li>
+              <label for="user-email">Email</label>
+              <input
+                type="email"
+                name="user-email"
+                id="user-email"
+                placeholder="john.doe@gmail.com"
+                required
+              />
+            </li>
+            <li>
+              <label for="user-password">Password</label>
+              <input
+                type="password"
+                name="user-password"
+                id="user-password"
+                minlength="6"
+                required
+              />
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>More Details</h2>
+          <ul>
+            <li>
+              <label for="user-age">Age</label>
+              <input
+                type="number"
+                step="5"
+                min="10"
+                max="65"
+                required
+                name="user-age"
+                id="user-age"
+              />
+            </li>
+            <li>
+              <label for="dob">Date of Birth</label>
+              <input type="date" step="5" name="dob" id="dob" required />
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>About You</h2>
+          <ul>
+            <li>
+              <h3 for="gender">Gender</h3>
+              <input type="radio" name="gender" /> Male
+              <input type="radio" name="gender" /> Female
+              <input type="radio" name="gender" /> Other
+            </li>
+            <li>
+              <h3 for="hobbies">Hobbies</h3>
+              <input type="checkbox" name="hobbies" /> Play Guitar
+              <input type="checkbox" name="hobbies" /> Play Cricket
+              <input type="checkbox" name="hobbies" /> Play Football
+            </li>
+            <li>
+              <h3 for="bio">Bio</h3>
+              <textarea name="bio" id="bio" cols="30" rows="4"></textarea>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </section>
+      </form>
+    </main>
+  </body>
+</html>
