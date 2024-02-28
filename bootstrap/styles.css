@@ -1,0 +1,41 @@
+body {
+  font-family: sans-serif;
+}
+#carouselExampleIndicators {
+  width: 100%;
+  max-width: 50rem;
+  height: 30rem;
+  margin: 2rem auto;
+}
+
+#carouselExampleIndicators img {
+  height: 30rem;
+  object-fit: cover;
+}
+
+#newsletter-signup {
+  max-width: 30rem;
+  margin: 4rem auto;
+}
+
+main {
+  margin-top: 80px;
+}
+
+section {
+  width: 100%;
+  max-width: 50rem;
+  height: 30rem;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+#main-image {
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
+}
+
+h1 {
+  text-align: center;
+}
