@@ -1,0 +1,34 @@
+<%- include('common/header') %>
+    <link rel="stylesheet" href="styles/restaurants.css" />
+
+    <main>
+      <h1>Recommended restaurants</h1>
+      <p>Find your next favorite restaurants with help of our other users!</p>
+      <% if(restaurents.length > 0) { %>
+      <p>We found <%= noOfRestaurents %> Restaurents.</p>
+
+      <ul id="restaurants-list">
+        <% for(restaurent of restaurents) { %>
+        <li class="restaurant-item">
+          <article>
+            <h2><%= restaurent.name %></h2>
+            <div class="restaurant-meta">
+              <p><%= restaurent.cuisine %></p>
+              <p><%= restaurent.address %></p>
+            </div>
+            <p><%= restaurent.description %></p>
+            <div class="restaurant-actions">
+              <a href="<%= restaurent.website %>" target="_blank"
+                >View Website</a
+              >
+            </div>
+          </article>
+        </li>
+        <% } %>
+      </ul>
+      <% } else { %>
+      <h3>No Restaurents Found !!</h3>
+      <% }%>
+    </main>
+  </body>
+</html>
