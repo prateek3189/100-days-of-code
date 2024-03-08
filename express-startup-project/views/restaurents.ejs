@@ -1,12 +1,15 @@
 <%- include('common/header') %>
-    <link rel="stylesheet" href="styles/restaurants.css" />
+    <link rel="stylesheet" href="/styles/restaurants.css" />
 
     <main>
       <h1>Recommended restaurants</h1>
       <p>Find your next favorite restaurants with help of our other users!</p>
       <% if(restaurents.length > 0) { %>
       <p>We found <%= noOfRestaurents %> Restaurents.</p>
-
+      <form action="/restaurents" method="get">
+        <input type="hidden" name="order" value="<%= nextOrder %>">
+        <button class="btn">Change order</button>
+      </form>
       <ul id="restaurants-list">
         <% for(restaurent of restaurents) { %>
         <li class="restaurant-item">
@@ -18,8 +21,8 @@
             </div>
             <p><%= restaurent.description %></p>
             <div class="restaurant-actions">
-              <a href="<%= restaurent.website %>" target="_blank"
-                >View Website</a
+              <a href="/restaurents/<%= restaurent.id %>"
+                >View Restarent</a
               >
             </div>
           </article>
