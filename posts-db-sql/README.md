@@ -8,4 +8,4 @@
 
 ### Run lite server
 
-`lite-server`
+`npm start`
