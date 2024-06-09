@@ -1,0 +1,27 @@
+<%- include("../../shared/includes/head", {pageTitle: "WDE - Products"}) %>
+<script src="/scripts/product.js" defer></script>
+<link rel="stylesheet" href="/styles/products.css" />
+<body>
+  <%- include("../../shared/includes/header") %>
+  <main>
+    <h1>Product Administration</h1>
+    <section>
+      <h2>Manage Products</h2>
+      <p>
+        <a href="/admin/products/new">Add Product</a>
+      </p>
+    </section>
+    <section>
+      <ul class="products-grid">
+        <% for(const product of products) { %>
+
+        <li>
+          <%- include("../../shared/includes/product-item", {product: product})
+          %>
+        </li>
+        <% }%>
+      </ul>
+    </section>
+  </main>
+  <%- include("../../shared/includes/footer") %>
+</body>

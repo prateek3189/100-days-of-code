@@ -1,0 +1,70 @@
+<form
+  action="<%= submitPath + '?_csrf=' + locals.csrfToken %>"
+  method="POST"
+  enctype="multipart/form-data"
+>
+  <p>
+    <label for="title">Title</label>
+    <input
+      type="text"
+      name="title"
+      id="title"
+      required
+      value="<%= product.title %>"
+    />
+  </p>
+  <p>
+    <label for="image">Image</label>
+
+    <% if(imageRequired) { %>
+    <input
+      type="file"
+      name="image"
+      id="image"
+      required
+      accept="image/png, image/jpg, image/jpeg"
+    />
+
+    <% } else { %>
+    <input
+      type="file"
+      name="image"
+      id="image"
+      accept="image/png, image/jpg, image/jpeg"
+    />
+    <%} %>
+  </p>
+  <p>
+    <label for="summary">Summary</label>
+    <input
+      type="text"
+      name="summary"
+      value="<%= product.summary %>"
+      id="summary"
+      required
+      maxlength="250"
+    />
+  </p>
+  <p>
+    <label for="price">Price</label>
+    <input
+      type="number"
+      name="price"
+      id="price"
+      required
+      min="1"
+      step="1"
+      value="<%= product.price %>"
+    />
+  </p>
+  <p>
+    <label for="description">Description</label>
+    <textarea name="description" id="description" required rows="7">
+<%= product.description %></textarea
+    >
+  </p>
+  <p>
+    <button type="reset" class="btn btn-alt">Reset</button>
+    <button class="btn">Submit</button>
+  </p>
+</form>

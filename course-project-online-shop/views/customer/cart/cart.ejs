@@ -1,0 +1,31 @@
+<%- include("../../shared/includes/head", {pageTitle: "WDE - Cart"}) %>
+<link rel="stylesheet" href="/styles/cart.css" />
+<script src="/scripts/cart-item.js" defer></script>
+<body>
+  <%- include("../../shared/includes/header") %>
+  <main>
+    <h1>Your Cart</h1>
+    <ul id="cart-items" class="cart-items">
+      <% for(const cartItem of locals.cart.items) { %>
+      <li><%- include("includes/cart-item", {item: cartItem}) %></li>
+      <%} %>
+    </ul>
+    <div id="cart-total">
+      <p>
+        Total: $<span id="cart-total-price"
+          ><%= locals.cart.totalPrice.toFixed(2) %></span
+        >
+      </p>
+      <% if(locals.isAuth) { %>
+      <form action="/orders" method="POST">
+        <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>" />
+        <button class="btn">Buy Products</button>
+      </form>
+
+      <% } else { %>
+      <p id="login-message">Login to Purchase this product</p>
+      <% } %>
+    </div>
+  </main>
+  <%- include("../../shared/includes/footer") %>
+</body>
