@@ -70,7 +70,7 @@ class Product {
   static async findById(id) {
     let productId;
     try {
-      productId = new mongoDb.ObjectId(id);
+      productId = new mongodb.ObjectId(id);
       this.id = productId;
     } catch (e) {
       e.code = 404;
